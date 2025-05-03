@@ -5,6 +5,7 @@ This repository contains the complete pipeline and analysis for a capstone proje
 🧠 Project Objective
 The primary goal of the project was to build an efficient and interpretable binary classification model that could differentiate between high-severity and low-severity accidents. The model is designed to assist in traffic management, safety policy development, and emergency response planning by identifying critical conditions that lead to more severe accidents.
 
+
 📦 Dataset Summary
 ->Size: 7.7 million records
 
@@ -13,6 +14,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->Label: Severity (Levels 1–4, later reduced to binary: low [0] and high [1])
 
 ->Challenges: High dimensionality, class imbalance, missing values, and outliers
+
 
 🧹 Data Preprocessing & Cleaning
 
@@ -24,6 +26,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 
 ->Outlier Handling: Used RobustScaler to normalize data while preserving important outlier information.
 
+
 🛠️ Feature Engineering & Selection
 
 ->Feature Reduction: Removed redundant or high-cardinality columns (e.g., Street, Description, Zipcode).
@@ -33,6 +36,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->Encoding: One-hot encoding (with drop-first strategy) was used for categorical variables to avoid implicit ordinal relationships.
 
 ->Correlation Management: Removed highly correlated features to avoid multicollinearity and reduce noise.
+
 
 📊 Exploratory Data Analysis (EDA)
 
@@ -51,6 +55,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 
 ->Class Imbalance Handling: Evaluated SMOTE, Random Oversampling, and ADASYN. ADASYN was selected for its ability to focus on harder-to-learn minority samples, improving generalization and model robustness.
 
+
 🤖 Modeling & Evaluation
 
 ->Models Tried: K-Nearest Neighbors (KNN), Naïve Bayes, Decision Tree, Random Forest, Gradient Boosting, and XGBoost.
@@ -59,6 +64,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 
 ->Hyperparameter Tuning: Compared GridSearchCV, RandomizedSearchCV, and HyperOpt. HyperOpt yielded the best results with fewer iterations and better optimization in high-dimensional space.
 
+
 🏆 Best Model & Final Performance
 
 ->Model: XGBoost
@@ -66,6 +72,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->Performance: Achieved a recall of 0.70 for both classes, balancing true positive rate across high- and low-severity predictions.
 
 ->Why Recall Matters: In accident severity prediction, minimizing false negatives is critical—failing to predict a high-severity accident could lead to higher risks for drivers and delayed emergency response.
+
 
 ✅ Key Takeaways
 ->The pipeline successfully tackles real-world imbalanced classification problems in a high-volume, multi-feature dataset.
