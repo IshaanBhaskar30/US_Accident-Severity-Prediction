@@ -15,6 +15,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->Challenges: High dimensionality, class imbalance, missing values, and outliers
 
 🧹 Data Preprocessing & Cleaning
+
 ->Stratified Sampling: Reduced the dataset to ~300,000 rows while maintaining the class distribution to optimize model training without compromising data integrity.
 
 ->Missing Values: Applied mode imputation for categorical features and KNN imputation for continuous features to preserve data relationships.
@@ -24,6 +25,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->Outlier Handling: Used RobustScaler to normalize data while preserving important outlier information.
 
 🛠️ Feature Engineering & Selection
+
 ->Feature Reduction: Removed redundant or high-cardinality columns (e.g., Street, Description, Zipcode).
 
 ->New Features: Engineered time-based features like year, month, weekday, rush-hour flag, and traffic delay.
@@ -33,12 +35,14 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->Correlation Management: Removed highly correlated features to avoid multicollinearity and reduce noise.
 
 📊 Exploratory Data Analysis (EDA)
+
 ->Univariate & Bivariate Analysis: Used box plots, bar plots, and stacked visualizations to reveal distribution patterns and relationships with severity.
 
 ->Hypothesis Testing: Applied Chi-Square tests to assess associations between categorical features and accident severity.
 
 
 🏷️ Label Engineering & Class Imbalance
+
 ->Binary Labeling: Merged original severity levels into:
 
    o 0 → Low severity (Levels 1 & 2)
@@ -48,6 +52,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->Class Imbalance Handling: Evaluated SMOTE, Random Oversampling, and ADASYN. ADASYN was selected for its ability to focus on harder-to-learn minority samples, improving generalization and model robustness.
 
 🤖 Modeling & Evaluation
+
 ->Models Tried: K-Nearest Neighbors (KNN), Naïve Bayes, Decision Tree, Random Forest, Gradient Boosting, and XGBoost.
 
 ->Evaluation Metrics: Confusion matrix, classification report, ROC-AUC curves, and Youden’s J statistic to select optimal probability thresholds.
@@ -55,6 +60,7 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->Hyperparameter Tuning: Compared GridSearchCV, RandomizedSearchCV, and HyperOpt. HyperOpt yielded the best results with fewer iterations and better optimization in high-dimensional space.
 
 🏆 Best Model & Final Performance
+
 ->Model: XGBoost
 
 ->Performance: Achieved a recall of 0.70 for both classes, balancing true positive rate across high- and low-severity predictions.
