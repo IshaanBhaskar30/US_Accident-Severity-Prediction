@@ -49,9 +49,9 @@ The primary goal of the project was to build an efficient and interpretable bina
 
 ->Binary Labeling: Merged original severity levels into:
 
-   o 0 → Low severity (Levels 1 & 2)
+    o 0 → Low severity (Levels 1 & 2)
 
-   o 1 → High severity (Levels 3 & 4)
+    o 1 → High severity (Levels 3 & 4)
 
 ->Class Imbalance Handling: Evaluated SMOTE, Random Oversampling, and ADASYN. ADASYN was selected for its ability to focus on harder-to-learn minority samples, improving generalization and model robustness.
 
