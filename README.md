@@ -80,3 +80,6 @@ The primary goal of the project was to build an efficient and interpretable bina
 ->The project integrates rigorous preprocessing, targeted feature engineering, and robust evaluation techniques.
 
 ->The final model can be adapted and deployed to assist stakeholders in public safety, smart city planning, or insurance analytics.
+
+
+Note:- Dataset is big kindly download it directly from kaggle via this link https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents
